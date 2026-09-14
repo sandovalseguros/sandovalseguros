@@ -17,4 +17,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# Resumen legible para agentes de IA
+# https://sandovalseguros.mx/llms.txt
+
 Sitemap: https://sandovalseguros.mx/sitemap.xml
