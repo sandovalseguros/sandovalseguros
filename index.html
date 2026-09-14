@@ -7,6 +7,11 @@
 <meta name="description" content="Carlos Sandoval Domínguez, agente de seguros y fianzas en Ciudad de México. Cédula C (Riesgos Especiales) y Fianzas. Maestro en Derecho Procesal. Flotillas, RC empresarial, daños, GMM, vida y PPR. Auditoría preliminar sin costo." />
 <meta name="keywords" content="agente de seguros CDMX, seguros riesgos especiales Mexico, fianzas corporativas Ciudad de Mexico, seguro flotilla empresarial, responsabilidad civil empresarial, agente seguros cédula C, seguros industriales Mexico, broker seguros CDMX" />
 <meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://sandovalseguros.mx/" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" href="/icon-512.png" sizes="512x512" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#0D1B2A" />
 <meta name="author" content="Carlos Sandoval Domínguez — Sandoval Seguros y Fianzas" />
 <meta name="geo.region" content="MX-CMX" />
 <meta name="geo.placename" content="Ciudad de México" />
@@ -17,12 +22,17 @@
 <meta property="og:title" content="Sandoval Seguros y Fianzas — Protección diseñada, no solo vendida" />
 <meta property="og:description" content="Agente de seguros en CDMX con cédula C (Riesgos Especiales) y Maestría en Derecho. Flotillas, RC, fianzas, daños industriales, GMM y vida. Auditoría preliminar sin costo." />
 <meta property="og:locale" content="es_MX" />
+<meta property="og:image" content="https://sandovalseguros.mx/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Sandoval Seguros y Fianzas - Carlos Sandoval Dominguez, agente de seguros y fianzas en Ciudad de Mexico" />
 <meta property="og:site_name" content="Sandoval Seguros y Fianzas" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Sandoval Seguros y Fianzas — Protección diseñada, no solo vendida" />
 <meta name="twitter:description" content="Agente de seguros en CDMX. Riesgos Especiales, Fianzas, Flotillas, RC empresarial. Auditoría sin costo." />
+<meta name="twitter:image" content="https://sandovalseguros.mx/og.jpg" />
 
 <!-- Schema JSON-LD: LocalBusiness + Person -->
 <script type="application/ld+json">
@@ -30,44 +40,99 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "WebSite",
+      "@id": "https://sandovalseguros.mx/#website",
+      "url": "https://sandovalseguros.mx/",
+      "name": "Sandoval Seguros y Fianzas",
+      "inLanguage": "es-MX",
+      "publisher": {"@id": "https://sandovalseguros.mx/#business"}
+    },
+    {
+      "@type": ["InsuranceAgency", "LocalBusiness", "ProfessionalService"],
       "@id": "https://sandovalseguros.mx/#business",
       "name": "Sandoval Seguros y Fianzas",
-      "description": "Agente de seguros y fianzas en Ciudad de México especializado en riesgos especiales, flotillas corporativas, responsabilidad civil, daños industriales, fianzas y seguros de personas.",
-      "url": "https://sandovalseguros.mx",
+      "description": "Agente de seguros y fianzas en Ciudad de M\u00e9xico especializado en riesgos especiales, flotillas corporativas, responsabilidad civil, da\u00f1os industriales, fianzas y seguros de personas. Auditor\u00eda jur\u00eddica de p\u00f3lizas y defensa de siniestros.",
+      "url": "https://sandovalseguros.mx/",
+      "image": "https://sandovalseguros.mx/og.jpg",
+      "logo": "https://sandovalseguros.mx/icon-512.png",
       "telephone": "+525543465666",
       "email": "admin@sandovalseguros.mx",
+      "foundingDate": "2012-03",
+      "priceRange": "$$",
+      "currenciesAccepted": "MXN",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Ciudad de México",
+        "streetAddress": "Luis Spota 138, San Sim\u00f3n Ticumac",
+        "addressLocality": "Benito Ju\u00e1rez",
         "addressRegion": "CDMX",
+        "postalCode": "03660",
         "addressCountry": "MX"
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 19.4326,
-        "longitude": -99.1332
+        "latitude": 19.3771506,
+        "longitude": -99.1467179
       },
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "priceRange": "$$",
-      "areaServed": "México",
-      "serviceType": ["Seguros de riesgos especiales", "Fianzas corporativas", "Seguros de flotilla", "Responsabilidad civil", "Gastos médicos mayores", "Seguros de vida", "PPR"],
-      "sameAs": []
+      "hasMap": "https://www.google.com/maps/place/Sandoval+Seguros+y+Fianzas/@19.3771506,-99.1467179,17z/data=!3m1!4b1!4m6!3m5!1s0x477876a23bd36d3f:0x9eba9f571ebcb835!8m2!3d19.3771506!4d-99.1467179",
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday"], "opens": "10:00", "closes": "19:00"},
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:30", "closes": "19:00"}
+      ],
+      "areaServed": [
+        {"@type": "Country", "name": "M\u00e9xico"},
+        {"@type": "City", "name": "Ciudad de M\u00e9xico"}
+      ],
+      "founder": {"@id": "https://sandovalseguros.mx/#carlos"},
+      "employee": {"@id": "https://sandovalseguros.mx/#carlos"},
+      "knowsLanguage": "es-MX",
+      "slogan": "Protecci\u00f3n dise\u00f1ada. No solo vendida.",
+      "sameAs": [
+        "https://www.instagram.com/charly_sandoval_do/",
+        "https://www.facebook.com/c.san.seguros"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de seguros y fianzas",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Seguro de da\u00f1os empresariales", "description": "Activos, maquinaria, contenidos, continuidad operativa y riesgos catastr\u00f3ficos."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Responsabilidad civil empresarial", "description": "RC general, productos, profesional E&O, por industria y locatario."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Fianzas", "description": "Cumplimiento, proveedores, arrendamiento, fidelidad y liberaci\u00f3n de l\u00edneas."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Seguro de flotilla corporativa", "description": "Flotillas comerciales, transporte de carga y mercanc\u00edas puerta a puerta."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Riesgos especiales e industriales", "description": "Aeron\u00e1uticos, mar\u00edtimos, grandes riesgos industriales y reaseguro facultativo."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gastos m\u00e9dicos mayores", "description": "GMM individual, familiar y colectivo, con an\u00e1lisis de tabulador y deducibles."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Seguro de vida y PPR", "description": "Vida individual, planes de retiro y protecci\u00f3n patrimonial familiar."}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Auditor\u00eda jur\u00eddica de p\u00f3lizas", "description": "Revisi\u00f3n legal de contratos vigentes para detectar vicios ocultos, cl\u00e1usulas abusivas y causales de rechazo t\u00e9cnico."}}
+        ]
+      }
     },
     {
       "@type": "Person",
       "@id": "https://sandovalseguros.mx/#carlos",
-      "name": "Carlos Sandoval Domínguez",
+      "name": "Carlos Sandoval Dom\u00ednguez",
       "jobTitle": "Agente de Seguros y Fianzas",
-      "description": "Licenciado en Derecho y Maestro en Derecho Procesal Civil y Mercantil. Cédulas CNSF V418770 (Seguros Empresariales de Daños y Beneficios Empresariales para Personas) y Y411662 (Fianzas). Especialista en ajuste de siniestros de daños.",
+      "description": "Licenciado en Derecho y Maestro en Derecho Procesal Civil y Mercantil. C\u00e9dulas CNSF V418770 (Seguros Empresariales de Da\u00f1os y Beneficios Empresariales para Personas) y Y411662 (Fianzas). Especialista en ajuste de siniestros de da\u00f1os.",
+      "image": "https://sandovalseguros.mx/og.jpg",
       "worksFor": {"@id": "https://sandovalseguros.mx/#business"},
       "telephone": "+525543465666",
       "email": "admin@sandovalseguros.mx",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Ciudad de México",
+        "streetAddress": "Luis Spota 138, San Sim\u00f3n Ticumac",
+        "addressLocality": "Benito Ju\u00e1rez",
+        "addressRegion": "CDMX",
+        "postalCode": "03660",
         "addressCountry": "MX"
-      }
+      },
+      "knowsAbout": ["Seguros de da\u00f1os", "Fianzas", "Responsabilidad civil", "Riesgos especiales", "Ajuste de siniestros", "Derecho procesal civil y mercantil"],
+      "hasCredential": [
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "C\u00e9dula CNSF", "name": "C\u00e9dula V418770 - Seguros Empresariales de Da\u00f1os y Beneficios Empresariales para Personas", "recognizedBy": {"@type": "GovernmentOrganization", "name": "Comisi\u00f3n Nacional de Seguros y Fianzas", "url": "https://agentesajustadores.cnsf.gob.mx/"}},
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "C\u00e9dula CNSF", "name": "C\u00e9dula Y411662 - Fianzas", "recognizedBy": {"@type": "GovernmentOrganization", "name": "Comisi\u00f3n Nacional de Seguros y Fianzas", "url": "https://agentesajustadores.cnsf.gob.mx/"}},
+        {"@type": "EducationalOccupationalCredential", "credentialCategory": "degree", "name": "Maestr\u00eda en Derecho Procesal Civil y Mercantil"}
+      ],
+      "sameAs": [
+        "https://www.instagram.com/charly_sandoval_do/",
+        "https://www.facebook.com/c.san.seguros"
+      ]
     }
   ]
 }
@@ -710,11 +775,11 @@ footer p{font-size:0.74rem;color:rgba(255,255,255,0.25)}
         </div>
         <div class="con-item">
           <div class="con-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="con-item-label">Ubicación</div><div class="con-item-value">Ciudad de México, México</div></div>
+          <div><div class="con-item-label">Oficina</div><div class="con-item-value"><a href="https://www.google.com/maps/place/Sandoval+Seguros+y+Fianzas/@19.3771506,-99.1467179,17z/data=!3m1!4b1!4m6!3m5!1s0x477876a23bd36d3f:0x9eba9f571ebcb835!8m2!3d19.3771506!4d-99.1467179" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Luis Spota 138, San Simón Ticumac<br />Benito Juárez, 03660, Ciudad de México</a></div></div>
         </div>
         <div class="con-item">
           <div class="con-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
-          <div><div class="con-item-label">Atención</div><div class="con-item-value">Lunes a Viernes · 9:00 – 18:00</div></div>
+          <div><div class="con-item-label">Atención</div><div class="con-item-value">Lunes a Viernes · 10:00 – 19:00</div></div>
         </div>
       </div>
     </div>
@@ -756,7 +821,13 @@ footer p{font-size:0.74rem;color:rgba(255,255,255,0.25)}
 <footer>
   <div class="footer-brand">Sandoval <span>Seguros</span> y Fianzas</div>
   <p>© 2026 · Ciudad de México · <a href="mailto:admin@sandovalseguros.mx" style="color:rgba(255,255,255,0.35);text-decoration:none">admin@sandovalseguros.mx</a> · <a href="tel:+525543465666" style="color:rgba(255,255,255,0.35);text-decoration:none">55 43 46 56 66</a></p>
+  <p>Luis Spota 138, San Simón Ticumac, Benito Juárez, 03660, Ciudad de México</p>
   <p>Agente autorizado CNSF — Cédulas V418770 y Y411662</p>
+  <p style="margin-top:0.9rem">
+    <a href="https://www.instagram.com/charly_sandoval_do/" target="_blank" rel="noopener me" style="color:rgba(255,255,255,0.45);text-decoration:none;margin:0 0.6rem">Instagram</a>·
+    <a href="https://www.facebook.com/c.san.seguros" target="_blank" rel="noopener me" style="color:rgba(255,255,255,0.45);text-decoration:none;margin:0 0.6rem">Facebook</a>·
+    <a href="https://www.google.com/maps/place/Sandoval+Seguros+y+Fianzas/@19.3771506,-99.1467179,17z/data=!3m1!4b1!4m6!3m5!1s0x477876a23bd36d3f:0x9eba9f571ebcb835!8m2!3d19.3771506!4d-99.1467179" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.45);text-decoration:none;margin:0 0.6rem">Google Maps</a>
+  </p>
 </footer>
 
 <!-- WA FLOAT -->

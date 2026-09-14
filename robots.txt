@@ -1,0 +1,20 @@
+# robots.txt — sandovalseguros.mx
+# Sandoval Seguros y Fianzas · Carlos Sandoval Dominguez
+
+User-agent: *
+Allow: /
+
+# Rastreadores de IA: permitidos (queremos aparecer en respuestas generadas)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://sandovalseguros.mx/sitemap.xml
