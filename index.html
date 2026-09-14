@@ -349,6 +349,24 @@ h2.section-title{font-family:var(--ff-display);font-size:clamp(1.9rem,3.5vw,2.8r
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .btn-submit{width:100%;background:#25D366;color:var(--white);border:none;cursor:pointer;font-family:var(--ff-body);font-size:0.88rem;font-weight:500;padding:1rem;border-radius:var(--radius);letter-spacing:0.04em;transition:all var(--t);margin-top:0.5rem}
 .btn-submit:hover{background:#1ebe5d;transform:translateY(-1px)}
+.btn-submit:disabled{opacity:0.55;cursor:not-allowed;transform:none}
+.btn-alt{width:100%;background:transparent;color:var(--gold);border:1px solid var(--gold);cursor:pointer;font-family:var(--ff-body);font-size:0.84rem;font-weight:500;padding:0.85rem;border-radius:var(--radius);letter-spacing:0.04em;transition:all var(--t);margin-top:0.7rem}
+.btn-alt:hover{background:rgba(201,168,76,0.12)}
+.btn-submit svg,.btn-alt svg{width:17px;height:17px;vertical-align:-3px;margin-right:7px;fill:currentColor}
+.form-group .req{color:var(--gold);margin-left:2px}
+.field-err{display:none;font-size:0.73rem;font-weight:400;color:#F08A8A;margin-top:5px;letter-spacing:0.01em;text-transform:none}
+.form-group.invalid .field-err{display:block}
+.form-group.invalid input,.form-group.invalid select,.form-group.invalid textarea{border-color:#F08A8A}
+.form-nota{font-size:0.72rem;font-weight:300;color:rgba(255,255,255,0.35);line-height:1.6;margin-top:1.1rem;text-align:center}
+.form-ok{display:none;text-align:center;padding:1.5rem 0.5rem}
+.form-ok.on{display:block}
+.form-ok .ok-ico{width:52px;height:52px;border-radius:50%;border:2px solid #25D366;color:#25D366;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-size:1.5rem}
+.form-ok h4{font-family:var(--ff-display);font-size:1.3rem;font-weight:400;color:var(--white);margin-bottom:0.7rem}
+.form-ok p{font-size:0.85rem;font-weight:300;color:rgba(255,255,255,0.55);line-height:1.8;margin-bottom:0.5rem}
+.form-ok a{color:var(--gold);text-decoration:none}
+.form-ok a:hover{text-decoration:underline}
+.form-ok .ok-otra{background:none;border:none;color:rgba(255,255,255,0.4);font-family:var(--ff-body);font-size:0.78rem;cursor:pointer;margin-top:1.2rem;text-decoration:underline;padding:0.4rem}
+.form-ok .ok-otra:hover{color:var(--gold)}
 
 /* WA FLOAT */
 .wa-float{position:fixed;bottom:2rem;right:2rem;z-index:200;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.35);text-decoration:none;transition:transform var(--t),box-shadow var(--t)}
@@ -767,11 +785,11 @@ footer p{font-size:0.74rem;color:rgba(255,255,255,0.25)}
       <div class="con-info reveal">
         <div class="con-item">
           <div class="con-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div><div class="con-item-label">WhatsApp directo</div><div class="con-item-value"><a href="tel:+525543465666" style="color:rgba(255,255,255,0.85);text-decoration:none">55 43 46 56 66</a></div></div>
+          <div><div class="con-item-label">WhatsApp directo</div><div class="con-item-value"><a href="https://wa.me/525543465666?text=Hola%20Carlos%2C%20vengo%20de%20tu%20sitio%20web" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.85);text-decoration:none">55 43 46 56 66</a></div></div>
         </div>
         <div class="con-item">
           <div class="con-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="con-item-label">Correo</div><div class="con-item-value">admin@sandovalseguros.mx</div></div>
+          <div><div class="con-item-label">Correo</div><div class="con-item-value"><a href="mailto:admin@sandovalseguros.mx" style="color:rgba(255,255,255,0.85);text-decoration:none">admin@sandovalseguros.mx</a></div></div>
         </div>
         <div class="con-item">
           <div class="con-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -784,35 +802,53 @@ footer p{font-size:0.74rem;color:rgba(255,255,255,0.25)}
       </div>
     </div>
     <div class="con-form reveal reveal-d2">
-      <div class="form-row">
-        <div class="form-group"><label for="cn">Nombre</label><input type="text" id="cn" placeholder="Carlos Martínez" /></div>
-        <div class="form-group"><label for="ce">Empresa</label><input type="text" id="ce" placeholder="Mi Empresa S.A." /></div>
+      <form id="cform" novalidate>
+        <div class="form-row">
+          <div class="form-group" data-campo><label for="cn">Nombre <span class="req">*</span></label><input type="text" id="cn" name="nombre" autocomplete="name" required placeholder="Carlos Martínez" /><span class="field-err">Escribe tu nombre para saber con quién hablo.</span></div>
+          <div class="form-group"><label for="ce">Empresa</label><input type="text" id="ce" name="empresa" autocomplete="organization" placeholder="Opcional" /></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group" data-campo><label for="ct">WhatsApp <span class="req">*</span></label><input type="tel" id="ct" name="tel" autocomplete="tel" inputmode="tel" required placeholder="55 0000 0000" /><span class="field-err">Necesito un número de 10 dígitos para responderte.</span></div>
+          <div class="form-group"><label for="cm">Correo electrónico</label><input type="email" id="cm" name="correo" autocomplete="email" inputmode="email" placeholder="Opcional" /><span class="field-err">Ese correo no parece válido.</span></div>
+        </div>
+        <div class="form-group" data-campo>
+          <label for="cs">¿Qué necesitas? <span class="req">*</span></label>
+          <select id="cs" name="servicio" required>
+            <option value="">Selecciona un servicio…</option>
+            <option>Revisión de vulnerabilidad (auditoría preliminar)</option>
+            <option>Flotilla corporativa</option>
+            <option>Daños empresariales / RC</option>
+            <option>Riesgos especiales o industriales</option>
+            <option>Fianzas corporativas</option>
+            <option>Transporte y carga</option>
+            <option>Riesgos financieros / fraude</option>
+            <option>Beneficios para colaboradores</option>
+            <option>Gastos médicos, vida o retiro</option>
+            <option>Seguro de auto individual</option>
+            <option>Otro / No sé aún</option>
+          </select>
+          <span class="field-err">Elige una opción; si no sabes, marca "Otro / No sé aún".</span>
+        </div>
+        <div class="form-group"><label for="cv">Cuéntame tu caso</label><textarea id="cv" name="caso" placeholder="Opcional. Una línea basta: qué tienes asegurado hoy o qué necesitas proteger…"></textarea></div>
+        <button type="submit" class="btn-submit" id="cbwa">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Enviar por WhatsApp
+        </button>
+        <button type="button" class="btn-alt" id="cbmail">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Prefiero enviarlo por correo
+        </button>
+        <p class="form-nota">Te respondo el mismo día hábil. La asesoría no tiene costo para ti:<br />la comisión la paga la aseguradora, como marca la ley.</p>
+      </form>
+      <div class="form-ok" id="cok">
+        <div class="ok-ico">✓</div>
+        <h4>Listo, ya va en camino</h4>
+        <p id="cokvia">Se abrió WhatsApp con tu mensaje escrito. <strong>Falta que le des enviar.</strong></p>
+        <p>¿No se abrió nada? Escríbeme directo al
+          <a href="https://wa.me/525543465666" target="_blank" rel="noopener">55 4346 5666</a>
+          o a <a href="mailto:admin@sandovalseguros.mx">admin@sandovalseguros.mx</a>.</p>
+        <button type="button" class="ok-otra" id="cotra">Enviar otra solicitud</button>
       </div>
-      <div class="form-row">
-        <div class="form-group"><label for="ct">Teléfono / WhatsApp</label><input type="tel" id="ct" placeholder="55 0000 0000" /></div>
-        <div class="form-group"><label for="cm">Correo electrónico</label><input type="email" id="cm" placeholder="correo@empresa.com" /></div>
-      </div>
-      <div class="form-group">
-        <label for="cs">¿Qué necesitas?</label>
-        <select id="cs">
-          <option value="">Selecciona un servicio…</option>
-          <option>Revisión de vulnerabilidad (auditoría preliminar)</option>
-          <option>Flotilla corporativa</option>
-          <option>Daños empresariales / RC</option>
-          <option>Riesgos especiales o industriales</option>
-          <option>Fianzas corporativas</option>
-          <option>Transporte y carga</option>
-          <option>Riesgos financieros / fraude</option>
-          <option>Beneficios para colaboradores</option>
-          <option>Seguro de auto individual</option>
-          <option>Otro / No sé aún</option>
-        </select>
-      </div>
-      <div class="form-group"><label for="cv">Cuéntanos tu caso</label><textarea id="cv" placeholder="Descripción breve de tu situación actual o lo que necesitas proteger…"></textarea></div>
-      <button type="button" class="btn-submit"
-        onclick="window.location.href='mailto:admin@sandovalseguros.mx?subject=Solicitud de asesor%C3%ADa — sandovalseguros.mx&body='+encodeURIComponent('Nombre: '+document.getElementById('cn').value+'\nEmpresa: '+document.getElementById('ce').value+'\nTeléfono: '+document.getElementById('ct').value+'\nCorreo: '+document.getElementById('cm').value+'\nServicio: '+document.getElementById('cs').value+'\n\n'+document.getElementById('cv').value)">
-        Enviar solicitud →
-      </button>
     </div>
   </div>
 </section>
@@ -840,6 +876,84 @@ const obs = new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ---- Formulario de contacto ---- */
+(function(){
+  var form=document.getElementById('cform'), ok=document.getElementById('cok');
+  if(!form) return;
+  var TEL='525543465666', MAIL='admin@sandovalseguros.mx';
+  var g=function(id){return document.getElementById(id);};
+
+  function grupo(el){return el.closest('.form-group');}
+  function marca(el,mal){
+    var gp=grupo(el); if(!gp) return;
+    gp.classList.toggle('invalid',mal);
+    el.setAttribute('aria-invalid',mal?'true':'false');
+  }
+  function telOk(v){return (v.replace(/\D/g,'').length>=10);}
+  function mailOk(v){return v==='' || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);}
+
+  function valida(){
+    var malos=[];
+    var n=g('cn'), t=g('ct'), m=g('cm'), sv=g('cs');
+    var chk=[[n,n.value.trim()!==''],[t,telOk(t.value)],[m,mailOk(m.value)],[sv,sv.value!=='']];
+    chk.forEach(function(par){
+      var bien=par[1]; marca(par[0],!bien); if(!bien) malos.push(par[0]);
+    });
+    if(malos.length){ malos[0].focus(); malos[0].scrollIntoView({block:'center',behavior:'smooth'}); }
+    return malos.length===0;
+  }
+
+  /* al corregir, el error desaparece solo */
+  ['cn','ct','cm','cs'].forEach(function(id){
+    var el=g(id);
+    el.addEventListener('input',function(){ if(grupo(el).classList.contains('invalid')) valida(); });
+    el.addEventListener('change',function(){ if(grupo(el).classList.contains('invalid')) valida(); });
+  });
+
+  function texto(){
+    var L=[];
+    L.push('Hola Carlos, vengo de sandovalseguros.mx');
+    L.push('');
+    L.push('Nombre: '+g('cn').value.trim());
+    if(g('ce').value.trim()) L.push('Empresa: '+g('ce').value.trim());
+    L.push('WhatsApp: '+g('ct').value.trim());
+    if(g('cm').value.trim()) L.push('Correo: '+g('cm').value.trim());
+    L.push('Necesito: '+g('cs').value);
+    if(g('cv').value.trim()){ L.push(''); L.push(g('cv').value.trim()); }
+    return L.join('\n');
+  }
+
+  function muestraOk(via){
+    g('cokvia').innerHTML = via==='wa'
+      ? 'Se abri\u00f3 WhatsApp con tu mensaje ya escrito. <strong>Falta que le des enviar.</strong>'
+      : 'Se abri\u00f3 tu correo con el mensaje ya escrito. <strong>Falta que le des enviar.</strong>';
+    form.style.display='none'; ok.classList.add('on');
+    ok.scrollIntoView({block:'center',behavior:'smooth'});
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!valida()) return;
+    window.open('https://wa.me/'+TEL+'?text='+encodeURIComponent(texto()),'_blank','noopener');
+    muestraOk('wa');
+  });
+
+  g('cbmail').addEventListener('click',function(){
+    if(!valida()) return;
+    window.location.href='mailto:'+MAIL
+      +'?subject='+encodeURIComponent('Solicitud de asesor\u00eda \u2014 '+g('cs').value+' \u2014 '+g('cn').value.trim())
+      +'&body='+encodeURIComponent(texto());
+    muestraOk('mail');
+  });
+
+  g('cotra').addEventListener('click',function(){
+    form.reset();
+    form.querySelectorAll('.form-group').forEach(function(gp){gp.classList.remove('invalid');});
+    ok.classList.remove('on'); form.style.display='';
+    g('cn').focus();
+  });
+})();
 </script>
 </body>
 </html>
