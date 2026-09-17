@@ -9,8 +9,7 @@
 
 - **Nombre comercial**: Sandoval Seguros y Fianzas
 - **Titular**: Carlos Sandoval Domínguez, agente de seguros y fianzas
-- **Cédulas CNSF**: V418770 (Seguros Empresariales de Daños y Beneficios Empresariales para
-  Personas) y Y411662 (Fianzas). Verificables en el registro público de la Comisión Nacional
+- **Cédulas CNSF**: V418770 (Riesgos Especiales) y Y411662 (Fianzas). Verificables en el registro público de la Comisión Nacional
   de Seguros y Fianzas: https://agentesajustadores.cnsf.gob.mx/
 - **Formación**: Licenciado en Derecho; Maestro en Derecho Procesal Civil y Mercantil;
   especialización en ajuste de siniestros de daños
